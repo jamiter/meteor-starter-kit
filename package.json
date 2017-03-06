@@ -7,7 +7,7 @@
   "dependencies": {
     "apollo-client": "0.10.1",
     "isomorphic-fetch": "^2.2.1",
-    "bcrypt": "^0.8.7",
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.15.2",
     "classnames": "^2.2.5",
     "express": "^4.14.0",
@@ -21,7 +21,7 @@
     "react-addons-pure-render-mixin": "^15.3.1",
     "react-apollo": "^0.13.2",
     "react-dom": "^15.3.1",
-    "react-komposer": "^1.13.1",
+    "react-komposer": "^2.0.0",
     "redux": "^3.6.0"
   }
 }
