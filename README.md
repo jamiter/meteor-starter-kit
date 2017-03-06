@@ -1,5 +1,7 @@
 # meteor starter kit V0.1.6
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/apollographql/meteor-starter-kit.svg)](https://greenkeeper.io/)
+
 A simple kit to start experimenting with Apollo, Meteor and React.
 
 ### Includes:
