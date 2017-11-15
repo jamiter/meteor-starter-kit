@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { Random } from 'meteor/random';
 
 export const typeDefs = [
@@ -24,9 +25,9 @@ export const resolvers = {
     user(root, args, context) {
       /*
        * We access to the current user here thanks to the context. The current
-       * user is added to the context thanks to the `meteor/apollo` package.
+       * userId is added to the context thanks to the `meteor/swydo:ddp-apollo` package.
        */
-      return context.user;
+      return Meteor.users.findOne(context.userId);
     },
   },
   User: {
