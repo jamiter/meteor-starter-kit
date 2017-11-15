@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Random } from 'meteor/random';
+import { pubsub, USER_CHANGE_CHANNEL } from './pubsub';
 
 export const typeDefs = [
   `
@@ -17,6 +18,10 @@ type User {
 type Query {
   user: User
 }
+
+type Subscription {
+  userChange: User
+}
 `,
 ];
 
@@ -28,6 +33,11 @@ export const resolvers = {
        * userId is added to the context thanks to the `meteor/swydo:ddp-apollo` package.
        */
       return Meteor.users.findOne(context.userId);
+    },
+  },
+  Subscription: {
+    userChange: {
+      subscribe: () => pubsub.asyncIterator(USER_CHANGE_CHANNEL),
     },
   },
   User: {
