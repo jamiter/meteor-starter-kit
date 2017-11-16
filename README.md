@@ -3,7 +3,7 @@
 A simple kit to start experimenting with Apollo, Meteor and React.
 
 ### Includes
-- GraphQL server running with Express bound to the Meteor app
+- GraphQL being loaded via DDP
 - Apollo client
 - React
 - Accounts UI, Basic & password
@@ -17,8 +17,6 @@ Check `package.json` for specific versions
 meteor npm install
 meteor
 ```
-
-GraphiQL is enabled at [/graphiql](http://localhost:3000/graphiql).
 
 ### Folder structure
     .
@@ -35,11 +33,11 @@ GraphiQL is enabled at [/graphiql](http://localhost:3000/graphiql).
     │      └── Loading.js       # Reusable loading component
     │      └── LoginForm.js     # Component using `withApollo` HOC
     ├── server                  # Server files
-    │   └── server.js           # Main server file initiating Apollo server
+    │   └── server.js           # Main server file initiating DDP Apollo
     └── package.json            # node dependencies
 
 
 ### Learn more
 
-- [Meteor `apollo` package docs](http://dev.apollodata.com/core/meteor.html)
+- [Meteor `swydo:ddp-apollo` package docs](https://github.com/Swydo/ddp-apollo/blob/master/README.md)
 - [Apollo docs](http://dev.apollodata.com/)
